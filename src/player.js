@@ -1,8 +1,8 @@
 var spawn = require('child_process').spawn
 
-var args = []
+var args = ['-slave', '-quiet'];
 for (var i=2 ; i<process.argv.length; ++i) {
-	args[i-2] = process.argv[i];
+	args.push(process.argv[i]);
 }
 console.log(JSON.stringify(args))
 
